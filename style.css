@@ -107,6 +107,23 @@ sidebar - xs mobile
     margin-bottom: 0.4rem;
 }
 
+/******************************************
+
+top container - xs mobile
+
+*******************************************/
+
+.top-container{
+    text-align: right;
+    padding: 0.5rem 0.2rem 0.5rem 0
+}
+
+/******************************************
+
+main container - xs mobile
+
+*******************************************/
+
 
 
 
@@ -153,7 +170,10 @@ M MOBILE QUERY
         display: flex;
         flex-direction: column;
         padding: 0.5rem;
+        padding-bottom: 4rem; /* !!!! qual'è il modo migliore per distanziarlo dal player fixato? */
     }
+
+    /* !! sistemare padding bottom appena il player è finito */
 
     .install-app{
         margin-bottom: 0;
