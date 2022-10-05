@@ -44,6 +44,7 @@ viewport layout - xs mobile
     width: 100vw;
     display: flex;
     flex-direction: column;
+    position: relative;
 }
 
 .sidebar-top-main-container{
@@ -55,10 +56,9 @@ viewport layout - xs mobile
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    position: fixed;
-    height: 100%;
     background-color: black;
     color: gray;
+    font-size: small;
 }
 
 .top-main-container{
@@ -68,7 +68,6 @@ viewport layout - xs mobile
 }
 
 .top-container{
-    position: fixed;
     width: 100%;
     background-color: #080b12;
     color: gray;
@@ -76,10 +75,12 @@ viewport layout - xs mobile
 }
 
 .main-container{
+    max-height: 100vh;
     flex-grow: 1;
     justify-content: space-between;
     background-color: #141922;
     color: white;
+    overflow: auto;
 }
 
 .footer-player-container{
@@ -94,29 +95,6 @@ viewport layout - xs mobile
 .xs-display-none{
     display: none;
 }
-
-/* Questi padding servono asuperare i fixed con il contenuto del main container */
-.top-container,
-.main-container{
-    padding-left: 2.5rem;
-}
-
-.main-container{
-    padding-top: 2.5rem;
-}
-
-.top-container{
-    z-index: 1;
-}
-
-.sidebar{
-    z-index: 2;
-}
-
-.footer-player-container{
-    z-index: 3;
-}
-
 
 
 /******************************************
@@ -142,7 +120,6 @@ sidebar - xs mobile
     padding: 0.2rem;
     padding-bottom: 4rem; /* !!!! qual'è il modo migliore per distanziarlo dal player fixato? */
 }
-
 /* sistemare padding bottom appena il player è finito */
 
 .install-app{
@@ -166,7 +143,9 @@ main container - xs mobile
 
 *******************************************/
 
+  
 
+   
 
 
 /******************************************
@@ -176,6 +155,7 @@ M MOBILE QUERY
 *******************************************/
 
 @media screen and (min-width: 321px) {
+
 
     .xs-display-none{
         display: inline-block;
@@ -218,7 +198,6 @@ M MOBILE QUERY
         padding: 0.5rem;
         padding-bottom: 4rem; /* !!!! qual'è il modo migliore per distanziarlo dal player fixato? */
     }
-
     /* !! sistemare padding bottom appena il player è finito */
 
     .install-app{
