@@ -20,10 +20,10 @@ DEBUG
     border: 1px solid white;
 }
 
-.debug{
+/* .debug{
     height: 3000px;
     background-color: red;
-}
+} */
 
 
 
@@ -58,7 +58,6 @@ viewport layout - xs mobile
     justify-content: space-between;
     background-color: black;
     color: gray;
-    font-size: small;
 }
 
 .top-main-container{
@@ -71,7 +70,6 @@ viewport layout - xs mobile
     width: 100%;
     background-color: #080b12;
     color: gray;
-    
 }
 
 .main-container{
@@ -105,6 +103,7 @@ sidebar - xs mobile
 
 .sidebar{
     text-align: center;
+    font-size: 0.6rem;
 }
 
 .sidebar-upper-container > *{  
@@ -143,9 +142,76 @@ main container - xs mobile
 
 *******************************************/
 
-  
+  .main-container{
+    font-size: 0.6rem;
+    padding: 1.5rem 0;
+  }
 
+  .main-container-95{
+    width: 95%;
+    margin: auto;
+  }
+
+  .main-container-95 > *{
+    margin-top: 1.5rem;
+  }
+
+  .main-nav-container{
+    width: 100%;
+    margin: auto;
+    max-width: 100vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    text-align: center;
+  }
+
+  .main-nav-element{
+    width: calc(100% / 3);
+    padding: 0.5rem 0;
+    position: relative;
+  }
+
+  .main-nav-element::before{
+    content: "";
+    position: absolute;
+    background-color: green;
+    height: 2px;
+    bottom:15%;
+    left: 25%;
+    width: 50%;
+  }
    
+  .album-container{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  .album-card{
+    width: 45%;
+    text-align: center;
+  }
+
+  .album-card img{
+    margin: 0.8rem 0 0.2rem 0;
+  }
+
+  .album-card .album-subtitle{
+    margin-top: 0.2rem;
+  }
+
+  .album-image,
+  .artist-image{
+    width: 100%;
+  }
+
+  .artist-image{
+    border-radius: 50%;
+  }
+
+  
 
 
 /******************************************
@@ -207,7 +273,7 @@ M MOBILE QUERY
     .divider{
         background-color: gray;
         height: 1px;
-        width: 150px;
+        width: 100px;
         margin: 0.5rem 0;
     }
 
@@ -231,6 +297,10 @@ IPAD QUERY
 
 .xs-display-only{
     display: none;
+}
+
+.album-card{
+    width: calc(90% / 4);
 }
 
 /******************************************
