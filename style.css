@@ -72,6 +72,9 @@ viewport layout - xs mobile
 .footer-player-container{
     background-color: #282828;
     color: gray;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
 }
 
 .xs-display-none{
@@ -95,7 +98,10 @@ sidebar - xs mobile
 
 .sidebar-bottom-container{
     padding: 0.2rem;
+    padding-bottom: 4rem; /* !!!! qual'è il modo migliore per distanziarlo dal player fixato? */
 }
+
+/* sistemare padding bottom appena il player è finito */
 
 .install-app{
     margin-bottom: 0.4rem;
@@ -131,7 +137,17 @@ M MOBILE QUERY
     
     .playlists{
         flex-grow: 1;
+
     }
+
+    .playlists > *{
+        margin-top: 0.5rem;
+    }
+
+    .sidebar-playlist-list li{  /* !! verificare se margin top tra lista playlist e crea playlist aumenta con icona */
+        margin-top: 0.5rem;
+    }
+
 
     .sidebar-bottom-container{
         display: flex;
