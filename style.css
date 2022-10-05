@@ -20,6 +20,13 @@ DEBUG
     border: 1px solid white;
 }
 
+.debug{
+    height: 3000px;
+    background-color: red;
+}
+
+
+
 /******************************************
 
 XS MOBILE FIRST (UP TO 320PX WIDTH)
@@ -45,11 +52,13 @@ viewport layout - xs mobile
 }
 
 .sidebar{
-    background-color: black;
-    color: gray;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    position: fixed;
+    height: 100%;
+    background-color: black;
+    color: gray;
 }
 
 .top-main-container{
@@ -59,33 +68,66 @@ viewport layout - xs mobile
 }
 
 .top-container{
+    position: fixed;
+    width: 100%;
     background-color: #080b12;
     color: gray;
+    
 }
 
 .main-container{
     flex-grow: 1;
+    justify-content: space-between;
     background-color: #141922;
-    color: gray;
+    color: white;
 }
 
 .footer-player-container{
-    background-color: #282828;
-    color: gray;
     position: fixed;
     width: 100%;
     bottom: 0;
+    background-color: #282828;
+    color: gray;
+
 }
 
 .xs-display-none{
     display: none;
 }
 
+/* Questi padding servono asuperare i fixed con il contenuto del main container */
+.top-container,
+.main-container{
+    padding-left: 2.5rem;
+}
+
+.main-container{
+    padding-top: 2.5rem;
+}
+
+.top-container{
+    z-index: 1;
+}
+
+.sidebar{
+    z-index: 2;
+}
+
+.footer-player-container{
+    z-index: 3;
+}
+
+
+
 /******************************************
 
 sidebar - xs mobile
 
 *******************************************/
+
+.sidebar{
+    text-align: center;
+}
 
 .sidebar-upper-container > *{  
     padding: 0.2rem;
@@ -141,6 +183,10 @@ M MOBILE QUERY
 
     .xs-display-only{
         display: none;
+    }
+
+    .sidebar{
+        text-align: left;
     }
 
     .sidebar-upper-container{
