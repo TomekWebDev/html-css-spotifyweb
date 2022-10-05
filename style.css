@@ -9,6 +9,17 @@ UTILITY
 body{
     font-family: 'Montserrat', sans-serif;
 }
+
+/******************************************
+
+DEBUG
+
+*******************************************/
+
+.footer-player-container{
+    border: 1px solid white;
+}
+
 /******************************************
 
 XS MOBILE FIRST (UP TO 320PX WIDTH)
@@ -17,7 +28,7 @@ XS MOBILE FIRST (UP TO 320PX WIDTH)
 
 /******************************************
 
-layout - xs mobile
+viewport layout - xs mobile
 
 *******************************************/
 
@@ -35,10 +46,10 @@ layout - xs mobile
 
 .sidebar{
     background-color: black;
-    color: white;
+    color: gray;
     display: flex;
     flex-direction: column;
-    padding: 0.5rem;
+    justify-content: space-between;
 }
 
 .top-main-container{
@@ -49,37 +60,96 @@ layout - xs mobile
 
 .top-container{
     background-color: #080b12;
-    color: white;
+    color: gray;
 }
 
 .main-container{
     flex-grow: 1;
     background-color: #141922;
-    color: white;
+    color: gray;
 }
 
 .footer-player-container{
     background-color: #282828;
-    color: white;
+    color: gray;
 }
 
+.xs-display-none{
+    display: none;
+}
 
+/******************************************
 
+sidebar - xs mobile
 
+*******************************************/
 
+.sidebar-upper-container > *{  
+    padding: 0.2rem;
+}
+
+.home-search-library > *{
+    margin-top: 0.5rem;
+
+}
+
+.sidebar-bottom-container{
+    padding: 0.2rem;
+}
+
+.install-app{
+    margin-bottom: 0.4rem;
+}
 
 
 
 
 /******************************************
 
-BIGGER MOBILE QUERY
+M MOBILE QUERY
 
 *******************************************/
 
 @media screen and (min-width: 321px) {
 
+    .xs-display-none{
+        display: inline-block;
+    }
+
+    .xs-display-only{
+        display: none;
+    }
+
+    .sidebar-upper-container{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .sidebar-upper-container > *{  
+        padding: 0.5rem;
+    }
     
+    .playlists{
+        flex-grow: 1;
+    }
+
+    .sidebar-bottom-container{
+        display: flex;
+        flex-direction: column;
+        padding: 0.5rem;
+    }
+
+    .install-app{
+        margin-bottom: 0;
+    }
+
+    .divider{
+        background-color: gray;
+        height: 1px;
+        width: 150px;
+        margin: 0.5rem 0;
+    }
+
 
 }
 
@@ -96,6 +166,11 @@ IPAD QUERY
 *******************************************/
 
 @media screen and (min-width: 426px) {
+
+
+.xs-display-only{
+    display: none;
+}
 
 /******************************************
     
