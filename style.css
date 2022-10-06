@@ -234,6 +234,8 @@ footer - player
   display: flex;
   justify-content: flex-start;
   align-items: center;
+  
+  max-width: 215px;
 }
 
 .player-image-container{
@@ -268,20 +270,25 @@ footer - player
   justify-content: space-around;
   width: 33%;
   padding: 0.5rem 0;
+
+  
 }
 
 .player-buttons{
   display: flex;
   width: 100%;
+  margin: auto;
   justify-content: space-around;
   align-items: center;
-  font-size: 0.8rem;
+  font-size: 1rem;
+
+  max-width: 200px;
 }
 
 .play{
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   vertical-align: middle;
-  width: 40%;
+  width: 20%;
   text-align: center;
 }
 
@@ -339,6 +346,8 @@ footer - player
   justify-content: space-around;
   align-items: center;
   width: 28%;
+
+  max-width: 215px;
 }
 
 .volume-bar{
