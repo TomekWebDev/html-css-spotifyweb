@@ -316,6 +316,10 @@ footer - player
 .progress-bar:hover{
     background-color: green;
 }
+
+.progress-bar:hover .progress-cursor{
+    display: block;
+}
   
 .progress-cursor{
   font-size: 1rem;
