@@ -313,12 +313,19 @@ main container - xs mobile
     height: 5px;
     border-radius: 2rem;
     background-color: gray;
-    width: 60%;
+    flex-grow: 1;
+  }
+
+  .progress-bar{
+    background-color: white;
+    height: 5px;
+    border-radius: 2rem;
+    width: 20%;
   }
 
   .time-from-start,
   .time-to-end{
-    width: 20%;
+    margin: 0 0.2rem;
   }
 
   .time-to-end{
@@ -334,8 +341,16 @@ main container - xs mobile
 
   .volume-bar{
     height: 5px;
+    border-radius: 2rem;
     width: 50%;
     background-color: gray;
+  }
+
+  .progressive-volume-bar{
+    background-color: white;
+    height: 5px;
+    border-radius: 2rem;
+    width: 50%;
   }
 
 
