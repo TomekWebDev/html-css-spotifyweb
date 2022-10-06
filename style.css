@@ -167,6 +167,7 @@ main container
   justify-content: space-between;
   flex-wrap: wrap;
   text-align: center;
+  color: gray;
 }
 
 .main-nav-element{
@@ -181,8 +182,9 @@ main container
   background-color: green;
   height: 2px;
   bottom:15%;
-  left: 25%;
+  left: calc(50% - 15px);
   width: 50%;
+  max-width: 30px;
 }
    
 .album-container{
@@ -203,6 +205,7 @@ main container
 
 .album-card .album-subtitle{
   margin-top: 0.2rem;
+  color: gray;
 }
 
 .album-image,
@@ -222,7 +225,7 @@ footer - player
   display: flex;
   justify-content: space-between;
   font-size: 0.6rem;
-  color: white;
+  color: gray;
   height: 64px;
 }
 
@@ -248,6 +251,10 @@ footer - player
 .title-artist{
   width: 50%;
   margin-left: 0.2rem;
+}
+
+.title-artist h5{
+    color: white;
 }
 
 .favorite-add{
@@ -312,14 +319,6 @@ footer - player
   }
 
 }
-
-.progress-bar:hover{
-    background-color: green;
-}
-
-.progress-bar:hover .progress-cursor{
-    display: block;
-}
   
 .progress-cursor{
   font-size: 1rem;
@@ -354,7 +353,15 @@ footer - player
   height: 5px;
   border-radius: 2rem;
   width: 50%;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: end;
 }
+
+.progress-cursor-volume{
+    font-size: 1rem;
+  }
 
 /******************************************
 hovers
@@ -363,6 +370,48 @@ hovers
 .hover-only{
     display: none;
 }
+
+.hover-whitening:hover{
+    color: white;
+    text-shadow:  white;
+}
+
+.progress-bar:hover{
+    background-color: green;
+    color: white;
+}
+
+.progress-bar:hover .progress-cursor{
+    display: block;
+}
+
+.bar:hover .progress-bar{
+    background-color: green;
+    color: white;
+}
+
+.bar:hover .progress-cursor{
+    display: block;
+}
+
+.progressive-volume-bar:hover{
+    background-color: green;
+    color: white;
+}
+
+.progressive-volume-bar:hover .progress-cursor-volume{
+    display: block;
+}
+
+.volume-bar:hover .progressive-volume-bar{
+    background-color: green;
+    color: white;
+}
+
+.volume-bar:hover .progress-cursor-volume{
+    display: block;
+}
+
 
 
 
@@ -428,6 +477,10 @@ MEDIUM-LARGE MOBILE QUERY
 
     .playlists > *{
         margin-top: 0.5rem;
+    }
+
+    .playlists h4{
+        color: white;
     }
 
     .sidebar-playlist-list li{  /* !! verificare se margin top tra lista playlist e crea playlist aumenta con icona */
