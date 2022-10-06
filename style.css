@@ -245,8 +245,91 @@ main container - xs mobile
   }
 
   .footer-player-container{
-    
+    display: flex;
+    justify-content: space-between;
+    font-size: 0.6rem;
+    color: white;
   }
+
+  .player-left{
+    width: 30%;
+    background-color: salmon;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .player-image-container{
+    width: 30%;
+  }
+
+  .player-image{
+    width: 100%;
+  }
+
+  .title-artist{
+    width: 50%;
+  }
+
+  .favorite-add{
+    width: 10%;
+    font-size: 0.8rem;
+  }
+
+  .player-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40%;
+    background-color: green;
+  }
+
+  .player-buttons{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 0.8rem;
+  }
+
+  .play{
+    font-size: 1.2rem;
+    vertical-align: middle;
+    width: 40%;
+    text-align: center;
+  }
+
+
+  .player-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .bar{
+    height: 5px;
+    border-radius: 2rem;
+    background-color: gray;
+    width: 60%;
+  }
+
+  .time-from-start,
+  .time-to-end{
+    width: 20%;
+  }
+
+  .time-to-end{
+    text-align: end;
+  }
+
+  .player-right{
+    display: flex;
+    width: 30%;
+    background-color: red;
+  }
+
+
 
   
 
