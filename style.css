@@ -10,6 +10,10 @@ body{
     font-family: 'Montserrat', sans-serif;
 }
 
+ul{
+    list-style: none;
+}
+
 /******************************************
 
 DEBUG
@@ -50,6 +54,7 @@ viewport layout - xs mobile
 .sidebar-top-main-container{
     flex-grow: 1;
     display: flex;
+    max-height: 100vh;
 }
 
 .sidebar{
@@ -68,7 +73,7 @@ viewport layout - xs mobile
 
 .top-container{
     width: 100%;
-    background-color: #080b12;
+    background-color: rgb(8, 11, 18);
     color: gray;
 }
 
@@ -103,16 +108,34 @@ sidebar - xs mobile
 
 .sidebar{
     text-align: center;
-    font-size: 0.6rem;
+    font-size: 1.5rem;
+    height: 100%;
+    position: relative;
+    max-width: min-content;
+}
+
+.sidebar-upper-container{
+    margin-top: 0.5rem;
 }
 
 .sidebar-upper-container > *{  
     padding: 0.2rem;
 }
 
+.sidebar-upper-container img{
+    width: 1.5rem;
+}
+
+#big-logo{
+    width: 80%;
+}
+
+.sidebar-bottom-container img{
+    width: 60%;
+}
+
 .home-search-library > *{
     margin-top: 0.5rem;
-
 }
 
 .sidebar-bottom-container{
@@ -133,7 +156,17 @@ top container - xs mobile
 
 .top-container{
     text-align: right;
-    padding: 0.5rem 0.2rem 0.5rem 0
+    padding: 0.8rem 0.2rem 0.8rem 0
+}
+
+.upgrade-btn{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 0.6rem;
+    background-color: #080b12;
+    border: 1px solid gray;
+    border-radius: 2rem;
+    padding: 0.6rem 2rem;
+    color: gray;
 }
 
 /******************************************
@@ -233,6 +266,7 @@ M MOBILE QUERY
 
     .sidebar{
         text-align: left;
+        font-size: 0.6rem;
     }
 
     .sidebar-upper-container{
@@ -242,6 +276,32 @@ M MOBILE QUERY
 
     .sidebar-upper-container > *{  
         padding: 0.5rem;
+    }
+
+    /* idee migliori per allineare icone a testo? */
+
+    .sidebar-upper-container img{
+        width: 20%;
+        vertical-align: middle;
+    }
+
+    .home,
+    .search,
+    .library{
+        vertical-align: middle;
+        width: 100%;
+        position: relative;
+    }
+
+    .sidebar-nav-element{
+        position: absolute;
+        top: 20%;
+        left: 26%;
+    }
+    
+    .sidebar-bottom-container img{
+        width: 20%;
+        vertical-align: middle;
     }
     
     .playlists{
@@ -278,6 +338,8 @@ M MOBILE QUERY
     }
 
 
+
+
 }
 
 /******************************************
@@ -299,8 +361,18 @@ IPAD QUERY
     display: none;
 }
 
+.album-container{
+    justify-content: flex-start;
+}
+
+.main-container h2{
+    margin-left: calc(5% / 4);
+}
+
 .album-card{
     width: calc(90% / 4);
+    margin-right: calc(5% / 4);
+    margin-left: calc(5% / 4);
 }
 
 /******************************************
@@ -319,6 +391,14 @@ DESKTOP QUERY
 
 @media screen and (min-width: 769px) {
 
+.main-container h2{
+    margin-left: calc(5% / 6);
+}
 
+.album-card{
+    width: calc(90% / 6);
+    margin-right: calc(5% / 6);
+    margin-left: calc(5% / 6);
+}
 
 }
