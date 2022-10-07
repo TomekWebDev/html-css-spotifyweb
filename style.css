@@ -9,8 +9,6 @@ ul{
     list-style: none;
 }
 
-
-
 /******************************************
 XS MOBILE FIRST (UP TO 320PX WIDTH)
 *******************************************/
@@ -39,7 +37,7 @@ viewport layout - xs mobile
     justify-content: space-between;
     background-color: black;
     color: gray;
-    z-index: 1;
+    z-index: 2;
 }
 
 .top-main-container{
@@ -50,8 +48,9 @@ viewport layout - xs mobile
 
 .top-container{
     width: 100%;
-    background-color: rgb(8, 11, 18);
+    background-color: rgba(8, 11, 18, .8);
     color: gray;
+    z-index: 1;
 }
 
 .main-container{
@@ -69,13 +68,12 @@ viewport layout - xs mobile
     bottom: 0;
     background-color: #282828;
     color: gray;
-    z-index: 2;
+    z-index: 3;
 }
 
 .xs-display-none{
     display: none;
 }
-
 
 /******************************************
 sidebar
@@ -114,12 +112,6 @@ sidebar
     margin-top: 0.5rem;
 }
 
-.sidebar-bottom-container{
-    padding: 0.2rem;
- /* !!!! qual'è il modo migliore per distanziarlo dal player fixato? */
-}
-/* sistemare padding bottom appena il player è finito */
-
 .install-app{
     margin-bottom: 0.4rem;
 }
@@ -129,13 +121,13 @@ top container
 *******************************************/
 
 .top-container{
-    text-align: right;
     width: calc(100vw - 30.375px);
     height: 64px;
     display: flex;
     justify-content: end;
     align-items: center;
     position: fixed;
+    padding-right: 1%;
 }
 
 .upgrade-btn{
@@ -172,7 +164,7 @@ main container
   margin: auto;
   max-width: 615px;
   display: flex;
-  justify-content: space-between;
+  align-items: stretch;
   flex-wrap: wrap;
   text-align: center;
   color: gray;
@@ -181,18 +173,16 @@ main container
 .main-nav-element{
   width: calc(100% / 3);
   padding: 0.5rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   position: relative;
 }
 
-.main-nav-element::before{
-  content: "";
-  position: absolute;
-  background-color: green;
+.green-underline{
+  width: 30px;
   height: 2px;
-  bottom:15%;
-  left: calc(50% - 15px);
-  width: 50%;
-  max-width: 30px;
+  background-color: green;
 }
    
 .album-container{
@@ -203,17 +193,22 @@ main container
 }
 
 .album-card{
-  width: 45%;
+  width: 48%;
   text-align: center;
+  margin-top: 0.4rem;
 }
 
-.album-card img{
-  margin: 0.8rem 0 0.2rem 0;
+.album-card h3{
+  margin-top: 0.2rem;
 }
 
 .album-card .album-subtitle{
   margin-top: 0.2rem;
   color: gray;
+}
+
+.album-image{
+  vertical-align: middle;
 }
 
 .album-image,
@@ -242,7 +237,6 @@ footer - player
   display: flex;
   justify-content: flex-start;
   align-items: center;
-  
   max-width: 215px;
 }
 
@@ -278,8 +272,6 @@ footer - player
   justify-content: space-around;
   width: 33%;
   padding: 0.5rem 0;
-
-  
 }
 
 .player-buttons{
@@ -289,7 +281,7 @@ footer - player
   justify-content: space-around;
   align-items: center;
   font-size: 1rem;
-
+  min-width: 103.3px;
   max-width: 200px;
 }
 
@@ -299,7 +291,6 @@ footer - player
   width: 20%;
   text-align: center;
 }
-
 
 .player-bar{
   display: flex;
@@ -433,8 +424,36 @@ hovers
     display: block;
 }
 
+.main-nav-element:hover .green-underline{
+  display: block;
+}
 
+.play-me-container{
+  position: relative;
+}
 
+.play-me-container img{
+  backface-visibility: hidden;
+}
+
+.play-me{
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  text-align: center;
+  font-size: 2rem;
+}
+
+.play-me-container:hover .album-image{
+  opacity: 0.5;
+}
+
+.play-me-container:hover .play-me{
+  opacity: 1;
+}
 
 /******************************************
 MEDIUM-LARGE MOBILE QUERY
@@ -462,7 +481,17 @@ MEDIUM-LARGE MOBILE QUERY
     }
 
     .sidebar-upper-container > *{  
-        padding: 0.5rem;
+        padding: 0.5rem 0;
+    }
+
+    .logo,
+    .home-search-library > *,
+    .playlists{
+      padding-left: 0.5rem;
+    }
+
+    .green-side{
+      border-left: 3px solid green;
     }
 
     /* idee migliori per allineare icone a testo? */
@@ -508,7 +537,6 @@ MEDIUM-LARGE MOBILE QUERY
         margin-top: 0.5rem;
     }
 
-
     .sidebar-bottom-container{
         display: flex;
         flex-direction: column;
@@ -530,9 +558,6 @@ MEDIUM-LARGE MOBILE QUERY
     .top-container{
       width: calc(100vw - 116px);
   }
-
-
-
 
 }
 
@@ -561,7 +586,6 @@ IPAD QUERY
         margin-left: calc(5% / 4);
     }
 
-
 }   
 
 /******************************************
@@ -578,6 +602,10 @@ DESKTOP QUERY
         width: calc(90% / 6);
         margin-right: calc(5% / 6);
         margin-left: calc(5% / 6);
+    }
+
+    .play-me{
+      font-size: 2.5rem;
     }
 
 }
