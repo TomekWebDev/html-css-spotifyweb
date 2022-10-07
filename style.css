@@ -39,6 +39,7 @@ viewport layout - xs mobile
     justify-content: space-between;
     background-color: black;
     color: gray;
+    z-index: 1;
 }
 
 .top-main-container{
@@ -68,7 +69,7 @@ viewport layout - xs mobile
     bottom: 0;
     background-color: #282828;
     color: gray;
-
+    z-index: 2;
 }
 
 .xs-display-none{
@@ -129,7 +130,12 @@ top container
 
 .top-container{
     text-align: right;
-    padding: 0.8rem 0.2rem 0.8rem 0
+    width: calc(100vw - 30.375px);
+    height: 64px;
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: fixed;
 }
 
 .upgrade-btn{
@@ -148,7 +154,7 @@ main container
 
 .main-container{
   font-size: 0.6rem;
-  padding: 1.5rem 0;
+  padding: 5rem 0;
   padding-bottom: 68px;
 }
 
@@ -164,7 +170,7 @@ main container
 .main-nav-container{
   width: 100%;
   margin: auto;
-  max-width: 100vw;
+  max-width: 615px;
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
@@ -387,6 +393,10 @@ hovers
     text-shadow:  white;
 }
 
+.upgrade-btn:hover{
+  padding: 0.8rem 2.2rem;
+}
+
 .progress-bar:hover{
     background-color: green;
     color: white;
@@ -516,6 +526,10 @@ MEDIUM-LARGE MOBILE QUERY
         width: 100px;
         margin: 0.5rem 0;
     }
+
+    .top-container{
+      width: calc(100vw - 116px);
+  }
 
 
 
